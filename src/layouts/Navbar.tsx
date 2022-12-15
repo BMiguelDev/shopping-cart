@@ -15,7 +15,7 @@ export default function Navbar() {
                     <h3>redux toolkit</h3>
                     <div className={styles.nav_container}>
                         <NavLink
-                            to="/products"
+                            to="/shopping-cart/products"
                             className={({ isActive }) =>
                                 isActive ? `${styles.navbar_link} ${styles.navbar_link_active}` : styles.navbar_link
                             }
@@ -24,7 +24,7 @@ export default function Navbar() {
                         </NavLink>
 
                         <NavLink
-                            to="/cart"
+                            to="/shopping-cart/cart"
                             className={({ isActive }) =>
                                 isActive ? `${styles.navbar_link} ${styles.navbar_link_active}` : styles.navbar_link
                             }
