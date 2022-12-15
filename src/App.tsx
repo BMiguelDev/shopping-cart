@@ -11,9 +11,9 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<PageLayout />}>
-                    <Route path="products" element={<Products />}></Route>
-                    <Route path="cart" element={<CartContainer />}></Route>
+                <Route path="/shopping-cart" element={<PageLayout />}>
+                    <Route path="/shopping-cart/products" element={<Products />}></Route>
+                    <Route path="/shopping-cart/cart" element={<CartContainer />}></Route>
                     <Route path="*" element={<ErrorPage />} />
                 </Route>
             </Routes>
