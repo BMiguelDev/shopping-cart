@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux/es/exports";
 import { clearCart } from "../../features/cart/cartSlice";
 import { toggleModal } from "../../features/modal/modalSlice";
 
+import '../../App.scss';
 import styles from './Modal.module.scss';
 
 export default function Modal() {
@@ -25,7 +26,7 @@ export default function Modal() {
                 <div className={styles.btn_container}>
                     <button
                         type="button"
-                        className={`${styles.btn} ${styles.confirm_btn}`}
+                        className={`btn ${styles.confirm_btn}`}
                         onClick={() => {
                             dispatch(clearCart());
                             dispatch(toggleModal());
@@ -33,7 +34,7 @@ export default function Modal() {
                     >
                         confirm
                     </button>
-                    <button type="button" className={`${styles.btn} ${styles.clear_btn}`} onClick={() => dispatch(toggleModal())}>
+                    <button type="button" className={`btn ${styles.clear_btn}`} onClick={() => dispatch(toggleModal())}>
                         cancel
                     </button>
                 </div>

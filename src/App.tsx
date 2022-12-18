@@ -12,7 +12,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/shopping-cart" element={<PageLayout />}>
-                    <Route path="/shopping-cart/products" element={<Products />}></Route>
+                    <Route index element={<Products />}></Route>
                     <Route path="/shopping-cart/cart" element={<CartContainer />}></Route>
                     <Route path="*" element={<ErrorPage />} />
                 </Route>
