@@ -21,12 +21,12 @@ export default function Modal() {
 
     return (
         <aside className={styles.modal_container} onClick={(e) => handleClick(e)}>
-            <div className={styles.modal} ref={modalRef}>
+            <div className={styles.modal_popup} ref={modalRef}>
                 <h4>remove all items from your shopping cart?</h4>
                 <div className={styles.btn_container}>
                     <button
                         type="button"
-                        className={`btn ${styles.confirm_btn}`}
+                        className={`large_button ${styles.confirm_button}`}
                         onClick={() => {
                             dispatch(clearCart());
                             dispatch(toggleModal());
@@ -34,7 +34,7 @@ export default function Modal() {
                     >
                         confirm
                     </button>
-                    <button type="button" className={`btn ${styles.clear_btn}`} onClick={() => dispatch(toggleModal())}>
+                    <button type="button" className="large_button clear_button" onClick={() => dispatch(toggleModal())}>
                         cancel
                     </button>
                 </div>

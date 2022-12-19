@@ -5,30 +5,48 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 10;
+    background-color: var(--app-transparent-background-color-1);
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .modal {
-    background: var(--clr-white);
-    width: 80vw;
-    max-width: 400px;
-    border-radius: var(--radius);
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  .modal h4 {
-    margin-bottom: 0;
-    line-height: 1.5;
-  }
-  .modal .clear_btn,
-  .modal .confirm_btn {
-    margin-top: 1rem;
-  }
-  .btn_container {
-    display: flex;
-    justify-content: space-around;
-  }
+
+    .modal_popup {
+        background-color: var(--app-white-color);
+        width: 35%;
+        border-radius: .25rem;
+        padding: 1.75rem 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .8rem;
+
+        h4 {
+            color: var(--app-secondary-color);
+            margin: 0;
+            line-height: 1.5rem;
+            text-transform: capitalize;
+        }
+
+        .btn_container {
+            display: flex;
+            justify-content: space-around;
+
+            .confirm_button {
+                background: transparent;
+                padding: .5rem 1rem;
+                color: var(--app-primary-color);
+                border: .075rem solid var(--app-primary-color);
+                margin-top: .75rem;
+                border-radius: .25rem;
+
+                &:hover {
+                    background-color: var(--app-intermediate-color);
+                    border-color: var(--app-intermediate-color);
+                    //     color: var(--app-affirmative-color);
+                }
+            }
+        }
+    }
+}

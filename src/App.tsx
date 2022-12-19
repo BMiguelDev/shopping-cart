@@ -16,6 +16,9 @@ function App() {
                     <Route path="/shopping-cart/cart" element={<CartContainer />}></Route>
                     <Route path="*" element={<ErrorPage />} />
                 </Route>
+                <Route path="/" element={<PageLayout />}> 
+                    <Route path="*" element={<ErrorPage />}></Route>
+                </Route>
             </Routes>
         </BrowserRouter>
     );

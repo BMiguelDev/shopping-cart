@@ -1,5 +1,6 @@
-import { useDispatch } from "react-redux/es/hooks/useDispatch";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useDispatch, useSelector } from "react-redux";
+import { faSmile } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Modal from "../../components/Modal/Modal";
 import { toggleModal } from "../../features/modal/modalSlice";
@@ -16,32 +17,34 @@ export default function CartContainer() {
 
     return (
         <main>
-            <section className={styles.cart}>
+            <section className={styles.cart_container}>
                 {totalAmount < 1 ? (
-                    <header>
+                    <div className={styles.cart_empty}>
                         <h2>your bag</h2>
-                        <h4 className={styles.empty_cart}>is currently empty</h4>
-                    </header>
+                        <h4>Your bag is empty</h4>
+                        <h4>Add some products to see them here!</h4>
+                        <FontAwesomeIcon icon={ faSmile } />
+                    </div>
                 ) : (
-                    <header>
+                    <div className={styles.cart_list_container}>
                         <h2>your bag</h2>
-                        <div>
+                        <div className={styles.cart_list}>
                             {cartItems.map((item) => (
                                 <CartItem key={item.id} {...item} />
                             ))}
                         </div>
-                        <footer>
+                        <div className={styles.cart_bottom_bar}>
                             <hr />
-                            <div className={styles.cart_total}>
+                            <div className={styles.cart_bottom_total}>
                                 <h4>
                                     total <span>${totalPrice.toFixed(2)}</span>
                                 </h4>
                             </div>
-                            <button className={`${styles.btn} ${styles.clear_btn}`} onClick={() => dispatch(toggleModal())}>
+                            <button className="large_button clear_button" onClick={() => dispatch(toggleModal())}>
                                 clear cart
                             </button>
-                        </footer>
-                    </header>
+                        </div>
+                    </div>
                 )}
             </section>
             {isOpen && <Modal />}

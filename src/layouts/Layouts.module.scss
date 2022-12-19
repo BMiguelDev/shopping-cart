@@ -1,50 +1,22 @@
 // Style variables
 :root {
-    --app-bg-color: #97c2f0;
-    --app-bg-support-color: #5e95cf;
-    --app-text-color: #000000;
-    --app-text-support-color: rgb(128, 128, 128);
-    --app-todo-item-text-color: #001521;
-    --app-todo-item-priority-text-color: rgb(255, 222, 173);
-    --app-todo-item-icon-color: #001521;
-    --app-todo-item-priority-icon-border-color: rgb(150, 67, 7);
-    --app-input-box-color: rgb(245, 245, 245);
-    --app-link-border-color: #5e95cf;
-    --app-primary-color: rgb(71, 185, 205);
-    --app-primary-support-color: rgb(38, 96, 107);
-    --app-secondary-color: rgb(255, 172, 99);
-    --app-secondary-support-color: rgb(150, 67, 7);
-    --app-intermediate-color: rgb(255, 207, 119);
-    --app-intermediate-support-color: rgb(231, 98, 10);
-    --app-special-color: rgb(255, 222, 173);
-    --app-special-support-color: rgb(167, 132, 79);
-    --app-general-box-shadow-color: rgba(0, 0, 0, .5);
-    --app-box-shadow-focus-color: rgba(0, 0, 0, .25);
-    --footer-bg-color: rgb(27, 27, 27);
-    --footer-color: #ffffff;
-
-
-    --clr-primary: #645cff;
-    --clr-primary-dark: #282566;
-    --clr-primary-light: #a29dff;
-    --clr-grey-1: #102a42;
-    --clr-grey-5: #617d98;
-    --clr-grey-10: #f1f5f8;
-    --clr-white: #fff;
-    --clr-red-dark: hsl(360, 67%, 44%);
-    --clr-red-light: hsl(360, 71%, 66%);
-    --transition: all 0.2s ease-in-out;
-    --spacing: 0.25rem;
-    --radius: 0.25rem;
-    --large-screen-width: 1170px;
-    --small-screen-width: 90vw;
-    --fixed-width: 50rem;
-
     --app-bg-color: #f1f5f8;
+    --app-bg-support-color-1: #e0e6ec;
+    --app-bg-support-color-2: #d2dee9;
+    --app-text-color: #6e8498;
     --app-primary-color: #645cff;
     --app-secondary-color: #282566;
-    --app-intermediate-color: #a29dff;
-    --app-text-color: #102a42;
+    --app-intermediate-color: #c2c0e8;
+    --app-dark-color: #000000;
+    --app-white-color: #ffffff;
+    --app-affirmative-color: #90e510;
+    --app-negative-color: #bb2525;
+    --app-negative-support-color: #e66b6b;
+    --app-rating-star-color: rgb(241, 241, 21);
+    --app-transparent-background-color-1: rgba(0, 0, 0, 0.55);
+    --app-transparent-background-color-2: rgba(0, 0, 0, 0.25);
+    --footer-bg-color: rgb(27, 27, 27);
+    --footer-color: #ffffff;
 }
 
 
@@ -55,62 +27,17 @@
     line-height: 1.5;
     font-size: 0.875rem;
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
-    //align-items: center;
     justify-content: space-between;
-
-    // img {
-    //     width: 100%;
-    //     display: block;
-    // }
-
 }
-
-// img {
-//     width: 100%;
-//     display: block;
-// }
-
-// h1,
-// h2,
-// h3,
-// h4 {
-    // letter-spacing: var(--spacing);
-    // text-transform: capitalize;
-    // line-height: 1.25;
-    // margin-bottom: 0.75rem;
-// }
-
-// h1 {
-//     font-size: 3rem;
-// }
-
-// h2 {
-//     font-size: 2rem;
-// }
-
-// // h3 {
-// //     font-size: 1.5rem;
-// // }
-
-// h4 {
-//     font-size: 0.875rem;
-// }
-
-
-
-
 
 
 // Navbar content
 .navbar_container {
     background: var(--app-primary-color);
     padding: .65rem 3.5rem;
-    //max-width: var(--fixed-width);
     width: 100%;
-    //margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,7 +47,7 @@
         letter-spacing: .075rem;
         line-height: 1.25rem;
         font-size: 1.4rem;
-        color: var(--clr-white);
+        color: var(--app-white-color);
         text-transform: capitalize;
     }
 
@@ -133,6 +60,16 @@
 
         a {
             text-decoration: none;
+            transition: all .2s ease-in-out;
+
+            &:active {
+                color: var(--app-intermediate-color);
+            }
+
+            &:hover {
+                translate: 0 10%;
+                color: var(--app-intermediate-color);
+            }
         }
 
         .navbar_link_active {
@@ -149,7 +86,7 @@
 
             svg {
                 width: 1.75rem;
-                //color: var(--clr-white);
+                //color: var(--app-white-color);
             }
 
             .cart_amount_container {
@@ -168,7 +105,11 @@
                     margin: 0;
                     font-size: 1rem;
                     padding-bottom: .1rem;
-                    color: var(--clr-white);
+                    color: var(--app-white-color);
+
+                    &.cart_amount_overflow {
+                        font-size: .7rem;
+                    }
                 }
             }
         }

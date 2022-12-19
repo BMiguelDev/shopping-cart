@@ -30,7 +30,11 @@ export default function Navbar() {
                     >
                         <CartIcon />
                         <div className={styles.cart_amount_container}>
-                            <p>{totalAmount}</p>
+                            {
+                                totalAmount<100 ?
+                                <p>{totalAmount}</p> :
+                                <p className={styles.cart_amount_overflow}>99+</p>
+                            }
                         </div>
                     </NavLink>
                 </div>

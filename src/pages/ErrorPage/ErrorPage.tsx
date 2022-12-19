@@ -7,7 +7,7 @@ export default function ErrorPage() {
         <main className={styles.errorpage_container}>
             <img src={require("../../assets/images/404.webp")} alt="Error 404, page not found" />
             <p>Page not found</p>
-            <Link to="/shopping-cart/products" className={styles.error_page_link}>
+            <Link to="/shopping-cart" className={styles.error_page_link}>
                 Take me back
             </Link>
         </main>

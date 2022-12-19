@@ -15,20 +15,20 @@ export default function CartItem({ id, title, price, image, amount }: CartItemTy
     return (
         <article className={styles.cart_item}>
             <img src={image} alt={title} />
-            <div>
-                <h4>{title}</h4>
+            <div className={styles.cart_item_description}>
+                <h3>{title}</h3>
                 <h4 className={styles.item_price}>${price}</h4>
                 <button className={styles.remove_btn} onClick={() => dispatch(removeItem({ id, amount, price }))}>
                     <FontAwesomeIcon icon={faTrash} />
                 </button>
             </div>
-            <div>
-                <button className={styles.amount_btn} onClick={() => dispatch(increaseItemAmount(id))}>
+            <div className={styles.cart_item_right_side}>
+                <button className={styles.cart_item_amount_btn} onClick={() => dispatch(increaseItemAmount(id))}>
                     <ChevronUp />
                 </button>
-                <p className={styles.amount}>{amount}</p>
+                <p className={styles.cart_item_amount_text}>{amount<100 ? amount : "99+"}</p>
                 <button
-                    className={styles.amount_btn}
+                    className={styles.cart_item_amount_btn}
                     onClick={() => {
                         if (amount === 1) dispatch(removeItem({ id, amount, price }));
                         else dispatch(decreaseItemAmount(id));
