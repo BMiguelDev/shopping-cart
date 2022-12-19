@@ -4,14 +4,14 @@
     --app-bg-support-color-1: #e0e6ec;
     --app-bg-support-color-2: #d2dee9;
     --app-text-color: #6e8498;
-    --app-primary-color: #645cff;
+    --app-primary-color: #7e78ff;
     --app-secondary-color: #282566;
     --app-intermediate-color: #c2c0e8;
     --app-dark-color: #000000;
     --app-white-color: #ffffff;
     --app-affirmative-color: #90e510;
-    --app-negative-color: #bb2525;
-    --app-negative-support-color: #e66b6b;
+    --app-negative-color: #c73b3b;
+    --app-negative-support-color: #e89b9b;
     --app-rating-star-color: rgb(241, 241, 21);
     --app-transparent-background-color-1: rgba(0, 0, 0, 0.55);
     --app-transparent-background-color-2: rgba(0, 0, 0, 0.25);
@@ -60,20 +60,46 @@
 
         a {
             text-decoration: none;
-            transition: all .2s ease-in-out;
+            color: var(--app-white-color);
+            transition: translate .2s ease-in-out;
 
             &:active {
-                color: var(--app-intermediate-color);
+                color: var(--app-secondary-color);
             }
 
             &:hover {
                 translate: 0 10%;
-                color: var(--app-intermediate-color);
+                color: var(--app-secondary-color);
+            }
+
+            &:nth-of-type(2) {
+
+                &:active {
+
+                    .cart_amount_container {
+                        background-color: var(--app-secondary-color);
+    
+                        p {
+                            color: var(--app-white-color);
+                        }
+                    }
+                }
+    
+                &:hover {
+
+                    .cart_amount_container {
+                        background-color: var(--app-secondary-color);
+    
+                        p {
+                            color: var(--app-white-color);
+                        }
+                    }
+                }
             }
         }
 
         .navbar_link_active {
-            color: var(--app-intermediate-color);
+            color: var(--app-secondary-color);
         }
 
         a:first-of-type {
@@ -96,19 +122,32 @@
                 width: 1.25rem;
                 height: 1.25rem;
                 border-radius: 50%;
-                background: var(--app-intermediate-color);
+                background-color: var(--app-intermediate-color);
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: translate .2s ease-in-out;
 
                 p {
                     margin: 0;
                     font-size: 1rem;
                     padding-bottom: .1rem;
-                    color: var(--app-white-color);
+                    color: var(--app-secondary-color);
+                    transition: translate .2s ease-in-out;
 
                     &.cart_amount_overflow {
                         font-size: .7rem;
+                    }
+                }
+            }
+
+            &.navbar_link_active {
+
+                .cart_amount_container {
+                    background-color: var(--app-secondary-color);
+    
+                    p {
+                        color: var(--app-white-color);
                     }
                 }
             }
@@ -176,7 +215,8 @@
             }
         }
 
-        a:nth-of-type(1), a:nth-of-type(2) {
+        a:nth-of-type(1),
+        a:nth-of-type(2) {
             svg {
                 font-size: 1.1rem;
             }

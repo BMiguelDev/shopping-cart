@@ -17,7 +17,7 @@ export default function Navbar() {
                         end
                         to="/shopping-cart"
                         className={({ isActive }) =>
-                            isActive ? `${styles.navbar_link} ${styles.navbar_link_active}` : styles.navbar_link
+                            isActive ? styles.navbar_link_active : ""
                         }
                     >
                         Products
@@ -25,7 +25,7 @@ export default function Navbar() {
                     <NavLink
                         to="/shopping-cart/cart"
                         className={({ isActive }) =>
-                            isActive ? `${styles.navbar_link} ${styles.navbar_link_active}` : styles.navbar_link
+                            isActive ? styles.navbar_link_active : ""
                         }
                     >
                         <CartIcon />
