@@ -25,7 +25,6 @@ export default function Products() {
         <main className={styles.products_container}>
             {isLoading ? (
                 <div className={styles.loading_container}>
-                    {/* <h1>Loading...</h1> */}
                     <FontAwesomeIcon icon={faSpinner} />
                 </div>
             ) : (

@@ -3,11 +3,6 @@ import { CartItemType, CartType } from "../../models/model";
 
 export const LOCAL_STORAGE_KEY_CART_ITEMS = "ShoppingCartApp.CartItems";
 
-// const initialState: CartType = {
-//     cartItems: [],
-//     totalAmount: 0,
-//     totalPrice: 0,
-// };
 
 const initialState = (): CartType => {
     const localStorageItem = localStorage.getItem(LOCAL_STORAGE_KEY_CART_ITEMS);
@@ -77,37 +72,7 @@ const cartSlice = createSlice({
                 state.totalPrice = state.totalPrice + product.price;
             }
         },
-    },
-    // extraReducers: (builder) => {
-    //     builder
-    //     .addCase(getCartItems.pending, (state) => {
-    //         state.isLoading = true;
-    //     })
-    //     .addCase(getCartItems.fulfilled, (state, action) => {
-    //         state.isLoading = false;
-    //         state.cartItems = action.payload;
-    //         let amount = 0;
-    //         let total = 0;
-    //         state.cartItems.forEach((item) => {
-    //             item.amount=0;
-    //             amount = amount + item.amount;
-    //             total = total + item.price * item.amount;
-    //         })
-    //         state.totalAmount = amount;
-    //         state.totalPrice = total;
-    //     })
-    //     .addCase(getCartItems.rejected, (state, action /*this action will be received because we are returning something in the axios catch block*/) => {
-    //         // Change axios url (to make it inaccessible) to see this block running and showing in the console
-    //         console.log(action);
-    //         const newState = {
-    //             cartItems: cartItems,
-    //             totalAmount: 4,
-    //             totalPrice: 2199.96,
-    //             isLoading: false
-    //         }
-    //         return newState;
-    //     });
-    // }
+    }
 });
 
 export const { clearCart, removeItem, increaseItemAmount, decreaseItemAmount, addProductToCart } = cartSlice.actions;

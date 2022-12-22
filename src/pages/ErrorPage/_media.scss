@@ -52,9 +52,7 @@
             // }
         }
     }
-
 }
-
 
 
 // Media query for very small screens (mobile)
@@ -118,56 +116,29 @@
 @media screen and (max-height: 650px) and (min-width: 501px) and (max-width: 1000px) {
 
     // Error page content
-.errorpage_container {
-    width: 90%;
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    align-self: center;
+    .errorpage_container {
+        width: 90%;
+        height: 70vh;
+        gap: .25rem;
 
-    img {
-        width: 30%;
-    }
+        img {
+            width: 27.5%;
+        }
 
-    p {
-        margin: 0;
-        font-size: 1.25rem;
-        word-spacing: .25rem;
-        letter-spacing: .1rem;
-        color: var(--app-secondary-color);
-        transition: all .2s ease-in-out;
-    }
+        p {
+            font-size: .75rem;
+            word-spacing: .1rem;
+            letter-spacing: .05rem;
+        }
 
-    .error_page_link {
-        margin: 1.5rem 0rem;
-        padding: .5rem 1.5rem;
-        font-size: 1.5rem;
-        word-spacing: .15rem;
-        text-decoration: none;
-        color: var(--app-primary-color);
-        border: .1rem solid var(--app-primary-color);
-        border-radius: .25rem;
-        transition: all .2s ease-in-out;
-
-        &:hover {
-            @keyframes backAndForth {
-                0% {
-                    translate: -5% 0;
-                }
-
-                100% {
-                    translate: 0 0;
-                }
-            }
-
-            animation: backAndForth .35s ease 0s infinite alternate-reverse;
+        .error_page_link {
+            margin: 1.25rem 0rem;
+            margin: .75rem 0 0 0;
+            padding: .2rem .75rem;
+            font-size: .95rem;
+            word-spacing: .075rem;
         }
     }
-}
-
 }
 
 

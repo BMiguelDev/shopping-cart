@@ -44,7 +44,44 @@
 
 
 // Media queries for mobile content (landscape)
-@media screen and (max-height: 650px) and (min-width: 501px) and (max-width: 1000px) {}
+@media screen and (max-height: 650px) and (min-width: 501px) and (max-width: 1000px) {
+
+    // Global styles
+    .large_button {
+        // text-transform: uppercase;
+        // background: var(--app-primary-color);
+        // color: var(--app-white-color);
+        padding: 0.3rem 0.75rem;
+        letter-spacing: .015rem;
+        // display: inline-block;
+        // font-weight: 700;
+        // transition: all .2s ease-in-out;
+        font-size: .725rem;
+        // border: none;
+        // cursor: pointer;
+        // box-shadow: 0 .05rem .2rem var(--app-transparent-background-color-2);
+
+        // &:hover {
+        //     color: var(--app-primary-color);
+        //     background: var(--app-intermediate-color);
+        // }
+    }
+
+    .clear_button {
+        // background: transparent;
+        padding: 0.3rem .75rem;
+        // color: var(--app-negative-color);
+        // border: .075rem solid var(--app-negative-color);
+        margin-top: .5rem;
+        // border-radius: .25rem;
+
+        // &:hover {
+        //     background: var(--app-negative-support-color);
+        //     color: var(--app-negative-color);
+        //     border-color: var(--app-negative-support-color);
+        // }
+    }
+}
 
 
 // Media queries for small tablet content (square)

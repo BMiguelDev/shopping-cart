@@ -61,7 +61,61 @@
 
 
 // Media queries for mobile content (landscape)
-@media screen and (max-height: 650px) and (min-width: 501px) and (max-width: 1000px) {}
+@media screen and (max-height: 650px) and (min-width: 501px) and (max-width: 1000px) {
+
+    // Modal content
+    .modal_container {
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // background-color: var(--app-transparent-background-color-1);
+        // z-index: 2;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+
+        .modal_popup {
+            // background-color: var(--app-white-color);
+            width: 50%;
+            // border-radius: .25rem;
+            padding: 1.5rem 1rem;
+            // text-align: center;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            gap: .8rem;
+
+            h4 {
+                // color: var(--app-secondary-color);
+                // margin: 0;
+                font-size: .8rem;
+                line-height: 1.25rem;
+                // text-transform: capitalize;
+            }
+
+            .btn_container {
+                // display: flex;
+                // justify-content: space-around;
+
+                .confirm_button {
+                    // background: transparent;
+                    padding: 0.3rem 0.75rem;
+                    // color: var(--app-primary-color);
+                    // border: .075rem solid var(--app-primary-color);
+                    margin-top: .5rem;
+                    // border-radius: .25rem;
+
+                    // &:hover {
+                    //     background-color: var(--app-intermediate-color);
+                    //     border-color: var(--app-intermediate-color);
+                    // }
+                }
+            }
+        }
+    }
+}
 
 
 // Media queries for small tablet content (square)
