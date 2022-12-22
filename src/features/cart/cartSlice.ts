@@ -1,10 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CartType } from "../../models/model";
+import { CartItemType, CartType } from "../../models/model";
 
-const initialState: CartType = {
-    cartItems: [],
-    totalAmount: 0,
-    totalPrice: 0,
+export const LOCAL_STORAGE_KEY_CART_ITEMS = "ShoppingCartApp.CartItems";
+
+// const initialState: CartType = {
+//     cartItems: [],
+//     totalAmount: 0,
+//     totalPrice: 0,
+// };
+
+const initialState = (): CartType => {
+    const localStorageItem = localStorage.getItem(LOCAL_STORAGE_KEY_CART_ITEMS);
+    if (localStorageItem) {
+        let [newAmount, newPrice] = [0, 0];
+        const newCartItems: CartItemType[] = JSON.parse(localStorageItem);
+        newCartItems.forEach((item) => {
+            newAmount=newAmount+item.amount;
+            newPrice=newPrice+(item.price*item.amount);
+        })
+        return {
+            cartItems: newCartItems,
+            totalAmount: newAmount,
+            totalPrice: newPrice,
+        };
+    } else
+        return {
+            cartItems: [],
+            totalAmount: 0,
+            totalPrice: 0,
+        };
 };
 
 const cartSlice = createSlice({
@@ -47,7 +71,6 @@ const cartSlice = createSlice({
             const product = action.payload;
             if (!state.cartItems.find((cartProduct) => product.id === cartProduct.id)) {
                 let newProduct = { ...product };
-                console.log(newProduct);
                 newProduct.amount = 1;
                 state.cartItems.push(newProduct);
                 state.totalAmount = state.totalAmount + 1;

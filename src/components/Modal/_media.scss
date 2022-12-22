@@ -1,0 +1,72 @@
+// Media query for mobile content (portrait)
+@media screen and (max-width: 500px) and (min-height: 501px) {
+
+    // Modal content
+    .modal_container {
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // background-color: var(--app-transparent-background-color-1);
+        // z-index: 2;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+
+        .modal_popup {
+            // background-color: var(--app-white-color);
+            width: 72.5%;
+            // border-radius: .25rem;
+            padding: 1.5rem .85rem;
+            // text-align: center;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            gap: .8rem;
+
+            h4 {
+                // color: var(--app-secondary-color);
+                // margin: 0;
+                font-size: .835rem;
+                line-height: 1.25rem;
+                // text-transform: capitalize;
+            }
+
+            .btn_container {
+                // display: flex;
+                // justify-content: space-around;
+
+                .confirm_button {
+                    // background: transparent;
+                    padding: 0.3rem 0.75rem;
+                    // color: var(--app-primary-color);
+                    // border: .075rem solid var(--app-primary-color);
+                    margin-top: .5rem;
+                    // border-radius: .25rem;
+
+                    // &:hover {
+                    //     background-color: var(--app-intermediate-color);
+                    //     border-color: var(--app-intermediate-color);
+                    // }
+                }
+            }
+        }
+    }
+}
+
+
+// Media query for very small mobile screens
+@media screen and (max-width: 500px) and (max-height: 500px) {}
+
+
+// Media queries for mobile content (landscape)
+@media screen and (max-height: 650px) and (min-width: 501px) and (max-width: 1000px) {}
+
+
+// Media queries for small tablet content (square)
+@media screen and (min-height: 651px) and (min-width: 501px) and (max-width: 700px) {}
+
+
+// Media queries for tablet content (portrait)
+@media screen and (min-height: 651px) and (min-width: 701px) and (max-width: 1000px) {}

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { faSmile } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,12 +9,17 @@ import { CartType } from "../../models/model";
 import { AppDispatch, RootState } from "../../store";
 import CartItem from "./CartItem";
 import styles from "./CartContainer.module.scss";
+import { LOCAL_STORAGE_KEY_CART_ITEMS } from "../../features/cart/cartSlice";
 
 export default function CartContainer() {
     const { isOpen } = useSelector((store: RootState) => store.modal);
 
     const { cartItems, totalAmount, totalPrice }: CartType = useSelector((store: RootState) => store.cart);
     const dispatch = useDispatch<AppDispatch>();
+
+    useEffect(() => {
+        localStorage.setItem(LOCAL_STORAGE_KEY_CART_ITEMS, JSON.stringify(cartItems));
+    }, [cartItems]);
 
     return (
         <main>

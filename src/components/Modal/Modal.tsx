@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux/es/exports";
 import { clearCart } from "../../features/cart/cartSlice";
 import { toggleModal } from "../../features/modal/modalSlice";
 
-import '../../App.scss';
-import styles from './Modal.module.scss';
+import "../../App.scss";
+import styles from "./Modal.module.scss";
 
 export default function Modal() {
     const dispatch = useDispatch();
@@ -12,11 +12,9 @@ export default function Modal() {
     const modalRef = useRef<HTMLDivElement>(null);
 
     function handleClick(event: any) {
-        console.log("hey");
-            if(modalRef.current && !modalRef.current?.contains(event.target)) {
-                dispatch(toggleModal());
-            }
-        
+        if (modalRef.current && !modalRef.current?.contains(event.target)) {
+            dispatch(toggleModal());
+        }
     }
 
     return (

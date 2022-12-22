@@ -1,0 +1,55 @@
+// Media query for mobile content (portrait)
+@media screen and (max-width: 500px) and (min-height: 501px) {
+
+    // Global styles
+    .large_button {
+        // text-transform: uppercase;
+        // background: var(--app-primary-color);
+        // color: var(--app-white-color);
+        padding: 0.3rem 0.75rem;
+        letter-spacing: .015rem;
+        // display: inline-block;
+        // font-weight: 700;
+        // transition: all .2s ease-in-out;
+        font-size: .75rem;
+        // border: none;
+        // cursor: pointer;
+        // box-shadow: 0 .05rem .2rem var(--app-transparent-background-color-2);
+
+        // &:hover {
+        //     color: var(--app-primary-color);
+        //     background: var(--app-intermediate-color);
+        // }
+    }
+
+    .clear_button {
+        // background: transparent;
+        padding: 0.3rem .75rem;
+        // color: var(--app-negative-color);
+        // border: .075rem solid var(--app-negative-color);
+        margin-top: .5rem;
+        // border-radius: .25rem;
+
+        // &:hover {
+        //     background: var(--app-negative-support-color);
+        //     color: var(--app-negative-color);
+        //     border-color: var(--app-negative-support-color);
+        // }
+    }
+}
+
+
+// Media query for very small mobile screens
+@media screen and (max-width: 500px) and (max-height: 500px) {}
+
+
+// Media queries for mobile content (landscape)
+@media screen and (max-height: 650px) and (min-width: 501px) and (max-width: 1000px) {}
+
+
+// Media queries for small tablet content (square)
+@media screen and (min-height: 651px) and (min-width: 501px) and (max-width: 700px) {}
+
+
+// Media queries for tablet content (portrait)
+@media screen and (min-height: 651px) and (min-width: 701px) and (max-width: 1000px) {}
