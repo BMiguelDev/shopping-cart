@@ -39,6 +39,7 @@ const productsSlice = createSlice({
             state.productItems=action.payload;
         })
         .addCase(getProducts.rejected, (state) => {
+            state.isLoading=false;
             state.productItems=productItems;
         });
     }

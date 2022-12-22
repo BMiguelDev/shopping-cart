@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addProductToCart } from "../../features/cart/cartSlice";
 import { faShoppingCart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { addProductToCart } from "../../features/cart/cartSlice";
 import { ProductItemType } from "../../models/model";
 import { AppDispatch, RootState } from "../../store";
 import styles from "./Products.module.scss";

@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 import { ChevronDown, ChevronUp } from "../../assets/icons/icons";
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { decreaseItemAmount, increaseItemAmount, removeItem } from '../../features/cart/cartSlice';
 import { CartItemType } from "../../models/model";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from "./CartContainer.module.scss";
 
 
