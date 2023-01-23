@@ -28,16 +28,18 @@
 
 
 // Media query for very small screens (mobile)
-@media screen and (max-width: 500px) and (max-height: 500px) {
+@media screen and (max-width: 500px) and (max-height: 500px), screen and (max-width: 300px) and (min-height: 500px) {
 
     // Error page content
     .errorpage_container {
         width: 90%;
         height: 70vh;
         gap: .25rem;
+        overflow: hidden;
 
         img {
-            width: 60%;
+            width: unset;
+            height: 40%;
         }
 
         p {
@@ -47,9 +49,9 @@
         }
 
         .error_page_link {
-            margin: .5rem 0rem;
+            margin: 0;
             padding: .1rem .5rem;
-            font-size: .75rem;
+            font-size: .65rem;
             word-spacing: .1rem;
             border: .05rem solid var(--app-primary-color);
         }
@@ -67,20 +69,21 @@
         gap: .25rem;
 
         img {
-            width: 27.5%;
+            width: unset;
+            height: 50%;
         }
 
         p {
-            font-size: .75rem;
+            font-size: .7rem;
             word-spacing: .1rem;
             letter-spacing: .05rem;
         }
 
         .error_page_link {
-            margin: 1.25rem 0rem;
-            margin: .75rem 0 0 0;
-            padding: .2rem .75rem;
-            font-size: .95rem;
+            //margin: 1.25rem 0rem;
+            margin: 0;
+            padding: .125rem .75rem;
+            font-size: .8rem;
             word-spacing: .075rem;
         }
     }
@@ -88,16 +91,18 @@
 
 
 // Media queries for small tablet content (square)
-@media screen and (min-height: 651px) and (min-width: 501px) and (max-width: 700px) {
+@media screen and (min-height: 650px) and (min-width: 501px) and (max-width: 700px) {
 
     // Error page content
     .errorpage_container {
         width: 90%;
         height: 80vh;
         gap: 1rem;
+        overflow: hidden;
 
         img {
-            width: 70%;
+            width: unset;
+            height: 50%;
         }
 
         p {
@@ -117,16 +122,18 @@
 
 
 // Media queries for tablet content (portrait)
-@media screen and (min-height: 651px) and (min-width: 701px) and (max-width: 1000px) {
+@media screen and (min-height: 650px) and (min-width: 701px) and (max-width: 1000px) {
 
     // Error page content
     .errorpage_container {
         width: 90%;
         height: 80vh;
         gap: .75rem;
+        overflow: hidden;
 
         img {
-            width: 50%;
+            width: unset;
+            height: 50%;
         }
 
         p {

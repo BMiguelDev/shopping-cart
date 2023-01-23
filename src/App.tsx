@@ -6,7 +6,6 @@ import Products from "./pages/Products/Products";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import "./App.scss";
 
-
 function App() {
     return (
         <BrowserRouter>

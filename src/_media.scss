@@ -16,7 +16,7 @@
 
 
 // Media query for very small mobile screens
-@media screen and (max-width: 500px) and (max-height: 500px) {
+@media screen and (max-width: 500px) and (max-height: 500px), screen and (max-width: 300px) and (min-height: 500px) {
 
     // Global styles
     .large_button {
@@ -50,7 +50,7 @@
 
 
 // Media queries for small tablet content (square)
-@media screen and (min-height: 651px) and (min-width: 501px) and (max-width: 700px) {
+@media screen and (min-height: 650px) and (min-width: 501px) and (max-width: 700px) {
 
     // Global styles
     .large_button {
