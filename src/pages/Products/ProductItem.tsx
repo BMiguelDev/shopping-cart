@@ -1,8 +1,9 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { faShoppingCart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { addProductToCart } from "../../features/cart/cartSlice";
+import { LOCAL_STORAGE_KEY_CART_ITEMS, addProductToCart } from "../../features/cart/cartSlice";
 import { ProductItemType } from "../../models/model";
 import { AppDispatch, RootState } from "../../store";
 import styles from "./Products.module.scss";
@@ -16,6 +17,10 @@ export default function ProductItem({ product }: PropTypes) {
 
     const dispatch = useDispatch<AppDispatch>();
     const { cartItems } = useSelector((store: RootState) => store.cart);
+
+    useEffect(() => {
+        localStorage.setItem(LOCAL_STORAGE_KEY_CART_ITEMS, JSON.stringify(cartItems));
+    }, [cartItems]);
 
     return (
         <article className={styles.product_item}>
